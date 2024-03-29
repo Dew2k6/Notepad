@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Notepad</h1>
+        <div class="file-upload">
+            <label for="file-input" class="custom-file-upload">
+                <i class="fas fa-cloud-upload-alt"></i> Choose or Drag & Drop TXT File
+            </label>
+            <input type="file" id="file-input" accept=".txt" onchange="handleFileSelect(event)">
+        </div>
+        <textarea id="editor" placeholder="Start typing or upload a file..."></textarea>
+        <div class="save-container">
+            <input type="text" id="file-name" placeholder="Enter file name (without extension)">
+            <button id="save-btn"><i class="far fa-save"></i> Save</button>
+        </div>
+        <div class="drag-drop-area" id="drag-drop-area">
+            <div class="drag-drop-icon">
+                <i class="fas fa-file-upload"></i>
+            </div>
+            <div class="drag-drop-text">Drag & Drop TXT File Here</div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
